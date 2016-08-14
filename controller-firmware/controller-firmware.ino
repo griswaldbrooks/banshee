@@ -14,10 +14,12 @@
 #define M2_PWM_PIN 5
 #define M2_DO_PIN 4
 #define LED_PIN 13
-// Variables for global communication.
+
+// Definitions for angular/linear rate neutral PWM commands.
 const unsigned int NEUTRAL_AR_CMD = NEUTRAL_CMD;
 const unsigned int NEUTRAL_LR_CMD = NEUTRAL_CMD;
 
+// Variables for global communication.
 volatile unsigned long ulARStartTime = 0;
 volatile unsigned int uiARCmd = NEUTRAL_AR_CMD;
 volatile boolean bARCmdIsReady = false;
