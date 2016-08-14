@@ -1,17 +1,19 @@
-// Macros.
-#define MAX_DUTY 255  //< Value representing maximum PWM duty cycle for the 
-                      //< motors. 255 is 100% duty, or always on.
-#define DEADBAND_DELTA 100
-#define NEUTRAL_CMD 1500
+/** Macros.
+ */
+#define MAX_DUTY 255  ///< Value representing maximum PWM duty cycle for the 
+                      ///< motors. 255 is 100% duty, or always on.
+#define DEADBAND_DELTA 100  ///< &plusmn number of microseconds around the
+                            ///< NEUTRAL_CMD that equates to zero velocity.
+#define NEUTRAL_CMD 1500  ///< The PWM pulsewidth in microseconds that
+                          ///< equates to zero velocity.
 
-#define ANGULAR_RATE_PIN 0
+#define ANGULAR_RATE_PIN 0  ///< Digital pin for receiving angular rate command.
 #define LINEAR_RATE_PIN 1
 #define M1_PWM_PIN 6
 #define M1_DO_PIN 7
 #define M2_PWM_PIN 5
 #define M2_DO_PIN 4
 #define LED_PIN 13
-
 // Variables for global communication.
 const unsigned int NEUTRAL_AR_CMD = NEUTRAL_CMD;
 const unsigned int NEUTRAL_LR_CMD = NEUTRAL_CMD;

@@ -1,0 +1,13 @@
+language: c
+before_install:
+    - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -ac -screen 0 1280x1024x16"
+    - sleep 3
+    - export DISPLAY=:1.0
+    - sudo apt-get install arduino arduino-core
+script:
+    - arduino --verify --board arduino:avr:uno $PWD/controller-firmware/controller-firmware.ino
+    - arduino --verify --board arduino:avr:leonardo $PWD/controller-firmware/controller-firmware.ino
+notifications:
+    email:
+        on_success: change
+        on_failure: change
