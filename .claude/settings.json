@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(arduino-cli:*)",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(dot:*)",
+      "Bash(clang-format:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(rg *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docusaurus.io)",
+      "WebFetch(domain:arduino.cc)",
+      "WebFetch(domain:weaponizedplastic.com)",
+      "WebFetch(domain:cad.onshape.com)"
+    ],
+    "deny": []
+  }
+}
