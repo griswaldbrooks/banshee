@@ -50,7 +50,10 @@ cd website && npm run build                   # production build
 
 ## Pointers
 
-- `.claude/skills/` — invocable workflow shortcuts (`build`, `flash`, `lint`, `render-diagram`, `wrapup`).
+- `.claude/skills/` — invocable workflow shortcuts.
+  - Local: `build`, `docs`, `flash`, `lint`, `render-diagram`, `wrapup`.
+  - Vendored from [mattpocock/skills](https://github.com/mattpocock/skills) (symlinks → `.agents/skills/`): `tdd`, `to-issues`, `to-prd`, `triage`, `diagnose`, `zoom-out`, `improve-codebase-architecture`, `grill-with-docs`, `grill-me`, `caveman`, `write-a-skill`, `setup-matt-pocock-skills`.
 - `.claude/rules/` — git-workflow and firmware-style conventions.
 - `.claude/agents/` — `code-reviewer`.
+- `skills-lock.json` — pins vendored skill versions by hash. Update with `npx skills update`.
 - Sister repo with the same patterns: `~/personal/cat-detector`.
