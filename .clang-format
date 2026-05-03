@@ -1,0 +1,17 @@
+---
+Language: Cpp
+BasedOnStyle: LLVM
+BreakBeforeBraces: Allman
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+ColumnLimit: 120
+PointerAlignment: Left
+ReferenceAlignment: Left
+AccessModifierOffset: -2
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+SpaceAfterCStyleCast: false
+SortIncludes: false
+...
