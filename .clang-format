@@ -14,8 +14,4 @@ AllowShortIfStatementsOnASingleLine: Never
 AllowShortLoopsOnASingleLine: false
 SpaceAfterCStyleCast: false
 SortIncludes: false
-KeepEmptyLines:
-  AtEndOfFile: false
-  AtStartOfFile: true
-  AtStartOfBlock: false
 ...
