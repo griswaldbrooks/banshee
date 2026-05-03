@@ -16,4 +16,4 @@ To apply fixes:
 clang-format -i controller-firmware/controller-firmware.ino
 ```
 
-A repo-level `.clang-format` is tracked in [#18](https://github.com/griswaldbrooks/banshee/issues/18).
+Style is defined by `.clang-format` at the repo root and enforced by the `lint` job in CI.
