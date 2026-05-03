@@ -48,9 +48,17 @@ cd website && npm run build                   # production build
 - Issues live at https://github.com/griswaldbrooks/banshee/issues. Labels: `ci`, `docs`, `firmware`, `electronics`, `mechanical`, `infra`, `claude`, `season-log` plus the GitHub defaults.
 - This is a personal repo, low cadence — no PR template, no CONTRIBUTING.md.
 
+## Conventions
+
+- **Tooling lives behind pixi.** New toolchains (Rust, embassy, probe-rs, anything else) get pinned in `pyproject.toml` and exposed as `pixi run <task>` rather than ad-hoc installs. CI uses the same pixi tasks the dev box does. (#27, #28)
+- **Tooling is Rust by default.** HIL runner, tester firmware, and any future on-host helpers are Rust. Python is acceptable for one-off scripts but not load-bearing tooling.
+- **Tests are BDD-style.** `Given` / `When` / `Then`, with HIL scenario TOMLs making the structure explicit. See `.claude/rules/testing.md`.
+- **Tolerances are configurable.** Never hard-code a tolerance threshold inside an assertion engine; expose runner default → scenario override → per-expectation override. (#35)
+- **Single robot per repo.** Banshee lives here; sibling robots get their own repos following the same hub-modernization pattern.
+
 ## Pointers
 
 - `.claude/skills/` — invocable workflow shortcuts (`build`, `flash`, `lint`, `render-diagram`, `wrapup`).
-- `.claude/rules/` — git-workflow and firmware-style conventions.
+- `.claude/rules/` — git-workflow, firmware-style, and testing conventions.
 - `.claude/agents/` — `code-reviewer`.
 - Sister repo with the same patterns: `~/personal/cat-detector`.
