@@ -28,6 +28,11 @@ You're reviewing changes to Banshee — an Arduino-based combat robot. Reviews m
 - `#define` constants documented; magic numbers avoided.
 - Public methods have a one-line doxygen-style description if behavior is non-obvious.
 
+## Tests
+
+- HIL scenarios are BDD-structured (`given` / `when` / `then` blocks). See `.claude/rules/testing.md`.
+- Tolerances must be configurable, never hard-coded — runner default → scenario override → per-expectation override.
+
 ## Tooling
 
 - Builds clean for both `arduino:avr:uno` and `arduino:avr:leonardo` under `--warnings all`.
